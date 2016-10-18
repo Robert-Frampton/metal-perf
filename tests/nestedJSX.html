@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perf - Nested JSX</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script src="../node_modules/lodash/lodash.js"></script>
+    <script src="../node_modules/benchmark/benchmark.js"></script>
+    <script src="../node_modules/chart.js/dist/Chart.js"></script>
+
+    <script src="../build/metaljs/list.js"></script>
+
+    <script src="./suites/NestedJSX.js"></script>
+    <script src="./MetalPerf.js"></script>
+
+    <style>
+			#result {
+        padding: 15px;
+      }
+
+      .header-test {
+        width: 30%;
+      }
+
+      .header-result {
+        width: 70%;
+      }
+    </style>
+</head>
+<body>
+    <h1>Perf - Nested JSX</h1>
+    <div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th class="header-test">Test Case</th>
+            <th class="header-result">Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Metal</th>
+            <td id="Metal">Running</td>
+          </tr>
+        </tbody>
+      </table>
+      <p id="result" class="bg-info hidden"></p>
+      <div><a id="download" class="btn btn-primary hidden">Download chart image</a></div>
+      <canvas id="chart" class="hidden" width="400" height="400"></canvas>
+    </div>
+    <script>
+      MetalPerf.run(NestedJSX.addToSuite(new Benchmark.Suite()));
+    </script>
+</body>
+</html>
