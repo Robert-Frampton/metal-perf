@@ -19,6 +19,14 @@ window.NestedJSX = {
 				new metal.NestedJSX({count: 5}, element);
 			}
 		});
+
+		suite.add({
+			name: 'React' + (opt_suffix || ''),
+			fn: function() {
+				createElement();
+				React.render(React.createElement(react.Nested, {count: 5}), element);
+			}
+		});
 		return suite;
 	}
 };

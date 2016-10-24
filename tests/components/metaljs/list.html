@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Component - List</title>
+
+    <script src="../../../build/metaljs/list.js"></script>
+</head>
+<body>
+    <h1>Component - List</h1>
+    <script>
+			var items = [];
+			for (var i = 0; i < 13700; i++) {
+				items.push('Item ' + (i + 1));
+			}
+			new metalNamed.List.List({
+				items: items
+			});
+    </script>
+</body>
+</html>

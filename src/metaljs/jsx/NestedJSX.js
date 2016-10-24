@@ -2,11 +2,11 @@
 
 import JSXComponent from 'metal-jsx';
 
-window.nestedCount = 0;
+window.metalNestedCount = 0;
 
 class NestedJSX extends JSXComponent {
 	created() {
-		window.nestedCount++;
+		window.metalNestedCount++;
 	}
 
 	render() {
@@ -16,7 +16,7 @@ class NestedJSX extends JSXComponent {
 				<NestedJSX count={this.props.count - 1} />
 			);
 		}
-		return <div>{children}</div>;
+		return <div>Component {children}</div>;
 	}
 }
 
