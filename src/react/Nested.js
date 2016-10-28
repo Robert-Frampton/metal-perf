@@ -8,8 +8,6 @@ this.react.Nested = React.createClass({ // jshint ignore:line
 	},
 
 	render: function() {
-		this.isFirst = !window.reactFirst;
-		window.reactFirst = true;
 		var children = [];
 		for (var i = 0; i < this.props.count; i++) {
 			children.push(React.createElement(
