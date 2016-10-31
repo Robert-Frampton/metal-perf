@@ -6,13 +6,14 @@
     <title>Component - Nested React</title>
 
 		<script src="../../../node_modules/react/dist/react.min.js"></script>
+		<script src="../../../node_modules/react-dom/dist/react-dom.min.js"></script>
 		<script src="../../../src/react/Nested.js"></script>
 </head>
 <body>
     <h1>Component - Nested React</h1>
 		<div id="main"></div>
     <script>
-			React.render(
+			ReactDOM.render(
 				React.createElement(react.Nested, {count: 7}),
 				document.querySelector('#main')
 			);

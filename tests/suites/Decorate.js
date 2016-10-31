@@ -37,7 +37,7 @@ window.Decorate = {
 			name: 'React' + (opt_suffix || ''),
 			fn: function() {
 				createElement();
-				React.render(React.createElement(react.List, data), element);
+				ReactDOM.render(React.createElement(react.List, data), element);
 			}
 		});
 

@@ -16,6 +16,7 @@
 		"MetalPerf": true,
 		"react": true,
 		"React": true,
+		"ReactDOM": true,
 		"soy": true,
 		"soydata": true,
 		"YUI": true,

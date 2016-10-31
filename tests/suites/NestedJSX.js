@@ -24,7 +24,7 @@ window.NestedJSX = {
 			name: 'React' + (opt_suffix || ''),
 			fn: function() {
 				createElement();
-				React.render(React.createElement(react.Nested, {count: 5}), element);
+				ReactDOM.render(React.createElement(react.Nested, {count: 5}), element);
 			}
 		});
 		return suite;

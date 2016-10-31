@@ -48,7 +48,7 @@ window.Update = {
 			},
 			onStart: function() {
 				createElement();
-				list = React.render(React.createElement(react.List, {items: items}), element);
+				list = ReactDOM.render(React.createElement(react.List, {items: items}), element);
 			}
 		});
 
